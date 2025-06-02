@@ -29,6 +29,59 @@
 هر فرآیند به صورت یک ساختار (Struct) با فیلدهای شناسه، زمان ورود، مدت زمان اجرا، و زمان‌های شروع، اتمام، پاسخ و ... مدل‌سازی شده است.
 زمان سیستم (current time) در تمام الگوریتم‌ها با توجه به اجرای فرآیندها جلو می‌رود.
 پس از پایان اجرای الگوریتم‌ها، با استفاده از زمان‌های محاسبه شده، معیارهای موردنظر (WT, TAT, RT) برای هر فرآیند و میانگین آن‌ها گزارش می‌شوند
+نمونه خروجی برای RR
+
+Enter number of processes: 3
+Enter arrival time and burst time for process 1: 0 5
+Enter arrival time and burst time for process 2: 1 3
+Enter arrival time and burst time for process 3: 2 8
+Enter time quantum: 2
+
+PID	AT	BT	CT	WT	TAT	RT
+1	0	5	12	7	12	0
+2	1	3	10	6	9	1
+3	2	8	17	7	15	2
+
+Average waiting time: 6.67
+Average turnaround time: 12.00
+Average response time: 1.00
+پردازش 1 ابتدا 2 واحد اجرا می‌شود، باقی 3 واحد دارد.
+سپس پردازش 2 و 3 به ترتیب اجرا می‌شوند به همین منوال.
+زمان پاسخ هر پردازش برابر با وقتی است که اولین بار اجرا شده است.
+زمان اتمام در پایان کل اجرای پردازش‌ها ثبت می‌شود.
+نمونه خروجب برای SJF
+Enter number of processes: 3
+Enter arrival time and burst time for process 1: 0 5
+Enter arrival time and burst time for process 2: 1 3
+Enter arrival time and burst time for process 3: 2 8
+
+PID	AT	BT	ST	CT	WT	TAT	RT
+1	0	5	0	5	0	5	0
+2	1	3	5	8	4	7	4
+3	2	8	8	16	6	14	6
+
+Average waiting time: 3.33
+Average turnaround time: 8.67
+Average response time: 3.33
+
+نمونه خروجی برای FSFC
+
+
+Enter number of processes: 3
+Enter arrival time and burst time for process 1: 0 5
+Enter arrival time and burst time for process 2: 1 3
+Enter arrival time and burst time for process 3: 2 8
+
+PID	AT	BT	ST	CT	WT	TAT	RT
+1	0	5	0	5	0	5	0
+2	1	3	5	8	4	7	4
+3	2	8	8	16	6	14	6
+
+Average waiting time: 3.33
+Average turnaround time: 8.67
+Average response time: 3.33
+
+
 
 
 
